@@ -53,14 +53,14 @@
 
 ## addresses テーブル
 
-| Column       | Type        | Options                        |
-| ------------ | ----------- | ------------------------------ |
-| postal_code  | varchar(7)  | null: false, foreign_key: true |
-| prefecture   | string      | null: false, foreign_key: true |
-| city         | string      | null: false, foreign_key: true |
-| addresses    | string      | null: false, foreign_key: true |
-| building     | string      | foreign_key: true              |
-| phone_number | varchar(11) | null: false, foreign_key: true |
+| Column       | Type    | Options     |
+| ------------ | --------| ----------- |
+| postal_code  | string  | null: false |
+| prefecture_id| integer | null: false |
+| city         | string  | null: false |
+| addresses    | string  | null: false |
+| building     | string  |             |
+| phone_number | string  | null: false |
 
 ### Association
 
