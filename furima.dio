@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-01-31T02:53:47.188Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="XbAw_G1B36BRANQxCubN" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-01-31T02:55:03.919Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="5AsilJLuu4DxBXZ1HxDs" version="13.10.0" type="embed">
     <diagram id="YPXNqa_emsWm6IUhd6sM" name="ページ1">
         <mxGraphModel dx="568" dy="535" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -186,6 +186,9 @@
                 </mxCell>
                 <mxCell id="107" value="order" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
                     <mxGeometry x="400" y="830" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="user" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="405" y="370" width="40" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
