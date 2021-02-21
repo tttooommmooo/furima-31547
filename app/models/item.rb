@@ -6,9 +6,10 @@ class Item < ApplicationRecord
   belongs_to :shipping_fee_status
   belongs_to :prefecture
   belongs_to :scheduled_delivery
+  belongs_to :user
   
 
-  validates :image, :name, :info, :price, :user_id, presence: true
+  validates :image, :name, :info, :price, presence: true
 
   validates :category_id, :status_id, :shipping_fee_status_id, :prefecture_id, :scheduled_delivery_id, numericality: { other_than: 1, message:"Select"}
 
