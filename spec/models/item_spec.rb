@@ -12,15 +12,15 @@ RSpec.describe Item, type: :model do
         expect(@item).to be_valid
       end
       it "価格が300円であれば出品できる" do
-        @item.price = '300'
+        @item.price = 300
         expect(@item).to be_valid
       end
       it "価格が9,999,999円であれば出品できる" do
-        @item.price = '9999999'
+        @item.price = 9999999
         expect(@item).to be_valid
       end
       it "価格が半角数字であれば出品できる" do
-        @item.price = '10000'
+        @item.price = 10000
         expect(@item).to be_valid
       end
     end
@@ -41,27 +41,27 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Info can't be blank")
       end
       it 'カテゴリーの情報が空では登録できない' do
-        @item.category_id = '1'
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category Select")
       end
       it '商品の状態が空では登録できない' do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status Select")
       end
       it '配送料の負担が空では登録できない' do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status Select")
       end
       it '発送元の地域が空では登録できない' do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status Select")
       end
       it '発送までの日数が空では登録できない' do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status Select")
       end
@@ -71,12 +71,12 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
       it '価格が、¥300未満では登録できない' do
-        @item.price = '299'
+        @item.price = 299
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
       end
       it '価格の範囲が、¥9,999,999を越えると登録できない' do
-        @item.price = '10000000'
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be less than or equal to 9999999")
       end
