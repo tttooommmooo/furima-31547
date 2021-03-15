@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :scheduled_delivery
   belongs_to :user
-  
+  has_one :order
 
   validates :image, :name, :info, :price, presence: true
 
