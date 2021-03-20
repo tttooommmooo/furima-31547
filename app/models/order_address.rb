@@ -1,4 +1,4 @@
-class UserDonation
+class OrderAddress
 
   include ActiveModel::Model
   attr_accessor :user, :item, :postal_code, :prefecture_id, :city, :addresses, :building, :phone_number, :order
