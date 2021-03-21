@@ -8,7 +8,6 @@ FactoryBot.define do
     addresses { '天神' }
     building { 'ビル1-1' }
     phone_number { '09012345678' }
-    order { 1 }
     token {"tok_abcdefghijk00000000000000000"}
     
   end
