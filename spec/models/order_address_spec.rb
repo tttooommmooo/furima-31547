@@ -23,6 +23,11 @@ RSpec.describe OrderAddress, type: :model do
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include("Prefecture can't be blank")
     end
+    it '都道府県が"---"だと保存できないこと' do
+      @order_address.prefecture_id = 1
+      @order_address.valid?
+      expect(@order_address.errors.full_messages).to include("Prefecture can't be blank")
+    end
     it '市区町村が空だと保存できないこと' do
       @order_address.city = ''
       @order_address.valid?
@@ -66,7 +71,7 @@ RSpec.describe OrderAddress, type: :model do
     it "item_idが空だと購入できない" do
       @order_address.item = nil
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include("Item can't be blank ")
+      expect(@order_address.errors.full_messages).to include("Item can't be blank")
     end
   end
 end
