@@ -61,6 +61,11 @@ RSpec.describe OrderAddress, type: :model do
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include('Phone number Input only number')
     end
+    it 'phone_numberが英数混合では登録できないこと' do
+      @order_address.phone_number = '000000ooooo'
+      @order_address.valid?
+      expect(@order_address.errors.full_messages).to include('Phone number Input only number')
+    end
     it "tokenが空では登録できないこと" do
       @order_address.token = nil
       @order_address.valid?
