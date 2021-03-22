@@ -23,7 +23,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
@@ -56,6 +55,6 @@ class ItemsController < ApplicationController
   end
 
   def contributor_confirmation
-    redirect_to root_path unless current_user == @item.user
+    redirect_to root_path if @item.order.present? || current_user != @item.user
   end
 end
